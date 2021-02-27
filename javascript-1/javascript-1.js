@@ -9,6 +9,7 @@
 */
 
 //CODE HERE
+let myArr = [4, 'abc', ['cat', 'dog', 'bird'], 77]
 
 
 ////////////////////PROBLEM 2////////////////////
@@ -21,7 +22,7 @@
 const nestedLetters = ['m', 'g', 'e', 'q', 'h', ['n', 'b', ['v', 'z', 'y', 'r']], 'a']
 
 //CODE HERE
-
+const foundZ = nestedLetters[5][2][1];
 
 ////////////////////PROBLEM 3////////////////////
 /*
@@ -37,7 +38,7 @@ const desert = ['rattlesnake', 'coyote']
 //DO NOT EDIT CODE ABOVE
 
 //CODE HERE
-
+let animals = [...forest, ...ocean, ...savannah, ...desert]
 
 /*
     Now use the spread operator to make a copy of your animals array.
@@ -45,7 +46,7 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-
+let animalsCopy = [...animals, 'elephant']
 
 ////////////////////PROBLEM 4////////////////////
 /*
@@ -56,6 +57,7 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
+let compareNums = (num1, num2) => Math.max(num1, num2)
 
   
 ////////////////////PROBLEM 5////////////////////
@@ -68,15 +70,17 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
+let bestMovie = (movie) => `${movie} is the best movie ever!`
   
-  
+
 ////////////////////PROBLEM 6////////////////////
 /*
     Write an arrow function called 'jsNinja' that returns the string: 'I am a JavaScript ninja!'
 */
 
 //CODE HERE
-  
+let jsNinja = () => 'I am a JavaScript ninja!'
+
 
 ////////////////////PROBLEM 7////////////////////
 
@@ -97,7 +101,8 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-  
+delete gameInfo.rating
+
 
 ////////////////////PROBLEM 8////////////////////
 
@@ -119,8 +124,13 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
+for (let key in shapes) {
+    if (key % 2 == 1) {
+        delete key;
+    }
+}  
   
-  
+
 ////////////////////PROBLEM 9////////////////////
 
 //DO NOT EDIT CODE BELOW
@@ -161,6 +171,7 @@ const classes = [
 */
 
 //CODE HERE
+
 
   
 ////////////////////PROBLEM 10////////////////////
