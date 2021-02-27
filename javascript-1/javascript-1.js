@@ -124,14 +124,14 @@ delete gameInfo.rating
 */
 
 //CODE HERE
-for (let key in shapes) {
-    if (key % 2 == 1) {
-        delete key;
-    }
-}  
-  
+for(let key in shapes){
+    if (shapes[key] % 2 == 1){
+        delete shapes[key]
+    } 
+}
 
 ////////////////////PROBLEM 9////////////////////
+
 
 //DO NOT EDIT CODE BELOW
 const classes = [
@@ -171,7 +171,13 @@ const classes = [
 */
 
 //CODE HERE
-
+for(let i = 0; i < classes.length; i++){
+    for(let key in classes[i]){
+      if (classes[i][key] = true){
+        classes[i][key] = false
+      }
+    } 
+  }
 
   
 ////////////////////PROBLEM 10////////////////////
