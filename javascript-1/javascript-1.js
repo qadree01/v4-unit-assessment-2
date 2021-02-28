@@ -242,15 +242,16 @@ const fido = new Dog('Fido', 3, 'Jack Russell', ['sit','shake'])
 */
 
 //CODE HERE
-
-
+function bark(){
+    return `${this.name} says bark!`
+}
 /*
     Invoke the call method on bark, passing in fido as the context
     and saving the result to a variable called fidoSpeak.
 */
 
 //CODE HERE
-  
+fidoSpeak = bark.call(fido)
   
 ////////////////////PROBLEM 13////////////////////
 /*
@@ -261,7 +262,9 @@ const fido = new Dog('Fido', 3, 'Jack Russell', ['sit','shake'])
 */
 
 //CODE HERE
-
+function teachTrick(trick){
+    return trick.push([])
+}
 
 /*
     Invoke the bind method on teachTrick, passing in fido as the context and the string 'stay' as a trick.
@@ -269,7 +272,7 @@ const fido = new Dog('Fido', 3, 'Jack Russell', ['sit','shake'])
 */
 
 //CODE HERE
-  
+teachStay = teachTrick.bind(fido, 'stay');
   
 ////////////////////PROBLEM 14////////////////////
 /*
@@ -280,7 +283,7 @@ const fido = new Dog('Fido', 3, 'Jack Russell', ['sit','shake'])
 */
 
 //CODE HERE
-
+dogIntro = (treat, toy) => `${this.name} is a ${this.breed} that loves ${this.treat} and their ${this.toy}!`;
 
 /*
     Invoke the apply method on dogIntro, passing in fido as the context 
@@ -289,7 +292,7 @@ const fido = new Dog('Fido', 3, 'Jack Russell', ['sit','shake'])
 */
 
 //CODE HERE
-  
+fidoIntro = dogIntro.apply(fido, ['chicken', 'tennis ball']);
 
 ////////////////////PROBLEM 15////////////////////
 /*
@@ -299,7 +302,13 @@ const fido = new Dog('Fido', 3, 'Jack Russell', ['sit','shake'])
 */
 
 //CODE HERE
-
+function Phone(brand, model, storage, color, sold) {
+    this.brand = brand;
+    this.model = model;
+    this.storage = storage;
+    this.color = color;
+    this.sold = sold;
+}
   
 /*
     Next make three new phones using your constructor function.
@@ -313,11 +322,11 @@ const fido = new Dog('Fido', 3, 'Jack Russell', ['sit','shake'])
 */
 
 //CODE HERE
-  // let phone1 = 
+  let phone1 = new Phone('a', 'b', 1, 'c', true)
   
-  // let phone2 = 
+  let phone2 = new Phone('d', 'e', 2, 'f', false)
   
-  // let phone3 = 
+  let phone3 = new Phone('g', 'h', 3, 'i', true)
   
 /*
     Last, add a prototype method to Phone.
@@ -328,5 +337,8 @@ const fido = new Dog('Fido', 3, 'Jack Russell', ['sit','shake'])
 */
 
 //CODE HERE
-
+Phone.prototype.sell = function(){
+    this.sold = true;
+    alert(`${this.brand}${this.model} has been sold.`)
+}
   
