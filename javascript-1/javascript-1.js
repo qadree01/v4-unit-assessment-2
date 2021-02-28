@@ -194,7 +194,13 @@ let pairsArray = []
 //DO NOT EDIT CODE ABOVE
 
 //CODE HERE
-
+for(let i = 0; i < lettersToPair.length; i++){
+    for(let j = lettersToPair.length - 1; j > i; j--){
+        if(lettersToPair[i] === lettersToPair[j]){
+            pairsArray += lettersToPair.splice(j, 1)
+      }
+    }
+  }
     
 
 //////////////////////////////////PROBLEMS 11-14//////////////////////////////////
@@ -211,7 +217,12 @@ let pairsArray = []
 */
 
 //CODE HERE
-
+function Dog(name, age, breed, tricks) {
+    this.name = name;
+    this.age = age;
+    this.breed = breed;
+    this.tricks = tricks;
+}
 
 /*
     Invoke your dog constructor passing in 'Fido' for the name, 3 for the age, 
@@ -220,6 +231,7 @@ let pairsArray = []
 */
 
 //CODE HERE
+const fido = new Dog('Fido', 3, 'Jack Russell', ['sit','shake'])
   
 
 ////////////////////PROBLEM 12////////////////////
