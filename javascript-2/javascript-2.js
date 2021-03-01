@@ -36,6 +36,10 @@ let foods = [
 */
 
 //CODE HERE
+foods.forEach(food => {
+  food.calories = (food.carbs * 4) + (food.protein * 4) + (food.fat * 9);
+})
+
 
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
 /*
@@ -81,6 +85,12 @@ const products = [
 */
 
 //CODE HERE
+products.map(products => {
+  products.price = products.price - (products.price * .25);
+})
+
+let saleProducts = [...products]
+
 
 ////////////////////PROBLEM 3////////////////////
 /*
@@ -91,6 +101,7 @@ const products = [
 */
 
 //CODE HERE
+const blueProducts = saleProducts.filter(saleProduct => saleProducts.includes({color: ['blue']}) === true)
 
 ////////////////////PROBLEM 4////////////////////
 /*
@@ -99,7 +110,13 @@ const products = [
   Save the result to a variable called orderTotal.
 */
 
-//CODE HERE
+
+let orderTotal = (arr) => {
+  return blueProducts.reduce((acc, elem, i, arr) => {
+    return acc + elem
+   })
+}
+
 
 //////////////////////////////////PROBLEMS 5-8//////////////////////////////////
 /*
@@ -130,6 +147,8 @@ const shippingInfo = {
 */
 
 //CODE HERE
+let helensInfo = Object.assign({}, contactInfo, shippingInfo)
+
 
 ////////////////////PROBLEM 6////////////////////
 /*
@@ -139,6 +158,11 @@ const shippingInfo = {
 */
 
 //CODE HERE
+let ellensInfo = {...helensInfo};
+
+ellensInfo.name = 'Ellen';
+ellensInfo.email = 'ellen@email.com';
+
 
 ////////////////////PROBLEM 7////////////////////
 /* 
@@ -146,6 +170,8 @@ const shippingInfo = {
 */
 
 //CODE HERE
+let {email, newEllen} = ellensInfo;
+
 
 ////////////////////PROBLEM 8////////////////////
 /*
@@ -154,6 +180,8 @@ const shippingInfo = {
 */
 
 //CODE HERE
+zipCode = '08081', state = 'NJ'
+
 
 //////////////////////////////////PROBLEMS 9-11//////////////////////////////////
 /*
